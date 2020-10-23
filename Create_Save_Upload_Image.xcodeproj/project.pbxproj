@@ -13,6 +13,8 @@
 		0E3261572540E641008D559F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E3261552540E640008D559F /* Main.storyboard */; };
 		0E3261592540E645008D559F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E3261582540E645008D559F /* Assets.xcassets */; };
 		0E32615C2540E645008D559F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E32615A2540E645008D559F /* LaunchScreen.storyboard */; };
+		E7129289254142100072C3F2 /* DirectoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7129288254142100072C3F2 /* DirectoryManager.swift */; };
+		E712928B25416C560072C3F2 /* StickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E712928A25416C560072C3F2 /* StickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0E3261582540E645008D559F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E32615B2540E645008D559F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E32615D2540E645008D559F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7129288254142100072C3F2 /* DirectoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryManager.swift; sourceTree = "<group>"; };
+		E712928A25416C560072C3F2 /* StickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				0E32614F2540E640008D559F /* AppDelegate.swift */,
 				0E3261512540E640008D559F /* SceneDelegate.swift */,
 				0E3261532540E640008D559F /* ViewController.swift */,
+				E712928A25416C560072C3F2 /* StickerView.swift */,
+				E7129288254142100072C3F2 /* DirectoryManager.swift */,
 				0E3261552540E640008D559F /* Main.storyboard */,
 				0E3261582540E645008D559F /* Assets.xcassets */,
 				0E32615A2540E645008D559F /* LaunchScreen.storyboard */,
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E3261542540E640008D559F /* ViewController.swift in Sources */,
+				E712928B25416C560072C3F2 /* StickerView.swift in Sources */,
+				E7129289254142100072C3F2 /* DirectoryManager.swift in Sources */,
 				0E3261502540E640008D559F /* AppDelegate.swift in Sources */,
 				0E3261522540E640008D559F /* SceneDelegate.swift in Sources */,
 			);

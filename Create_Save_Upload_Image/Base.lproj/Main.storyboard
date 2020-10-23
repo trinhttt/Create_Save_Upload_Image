@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,23 +21,13 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PaY-IS-p2b">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="650"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wnu-De-93g">
-                                        <rect key="frame" x="286" y="561" width="80" height="80.5"/>
-                                        <color key="tintColor" red="0.84705882349999995" green="0.043137254899999998" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="BIf-ue-sjG"/>
-                                            <constraint firstAttribute="height" constant="80" id="JOQ-fa-87h"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="PaY-IS-p2b" firstAttribute="leading" secondItem="ehA-cR-dxY" secondAttribute="leading" id="3Ie-Ux-Feo"/>
-                                    <constraint firstAttribute="bottom" secondItem="Wnu-De-93g" secondAttribute="bottom" constant="8" id="BJR-n7-lrk"/>
+                                    <constraint firstAttribute="bottom" secondItem="PaY-IS-p2b" secondAttribute="bottom" id="TsO-Mu-p5H"/>
                                     <constraint firstItem="PaY-IS-p2b" firstAttribute="top" secondItem="ehA-cR-dxY" secondAttribute="top" id="hIp-9x-0Gz"/>
-                                    <constraint firstAttribute="trailing" secondItem="Wnu-De-93g" secondAttribute="trailing" constant="8" id="mkL-ef-gzx"/>
                                     <constraint firstAttribute="trailing" secondItem="PaY-IS-p2b" secondAttribute="trailing" id="qfI-0L-iPg"/>
-                                    <constraint firstAttribute="bottom" secondItem="PaY-IS-p2b" secondAttribute="bottom" id="qxU-vx-bqg"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bu-QU-uTq">
@@ -91,6 +81,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="9bu-QU-uTq" firstAttribute="top" secondItem="ehA-cR-dxY" secondAttribute="bottom" id="9dU-tt-fRt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9bu-QU-uTq" secondAttribute="trailing" id="9eC-RM-aZu"/>
@@ -101,18 +92,24 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9bu-QU-uTq" secondAttribute="bottom" constant="20" id="xQJ-6t-5Nk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="QLA-7R-4qg" appends="YES" id="I62-eG-oQj"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="ibPaPaImageView" destination="PaY-IS-p2b" id="zt8-Ub-wJW"/>
-                        <outlet property="ibTrashImage" destination="Wnu-De-93g" id="DMX-bf-Zwc"/>
+                        <outlet property="ibWrapperView" destination="ehA-cR-dxY" id="Pvj-Su-ZBs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="QLA-7R-4qg">
+                    <connections>
+                        <action selector="ibViewTapped:" destination="BYZ-38-t0r" id="Sei-qz-3xj"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="wjb-y8-tuW"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="trash" catalog="system" width="60" height="64"/>
-    </resources>
 </document>
